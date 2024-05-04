@@ -55,12 +55,12 @@ public class Main {
 				System.out.printf("%dは倒れた。",monster.getName());
 				monsters.remove(monster);
 				
-				if(monsters.isEmpty()) {
+				monsters.isEmpty();
 				System.out.println("人間グループの勝利");
-				break;
+	
 				
-				}
-			}
+				
+			
 				System.out.println("\n[モンスターのターン！]\n");
 				
 			
@@ -73,12 +73,12 @@ public class Main {
 				if(human.getHp()<=0) {
 					System.out.printf("%dは倒れた。",human.getName());
 					humans.remove(human);
-					if(humans.isEmpty()) {
-					System.out.println("人間グループの敗北");
-					break;
 					
-					}
-				}
+					humans.isEmpty();
+					System.out.println("人間グループの敗北");
+					
+					
+				
 					showGroupInfos(humans, monsters);
 					
 					
@@ -86,10 +86,13 @@ public class Main {
 					}
 					
 					showGroupInfos(humans, monsters);
-				}
 				
-			
-		
+				
+					}
+					
+					
+		}
+	}
 
 	
 				
