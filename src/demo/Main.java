@@ -43,24 +43,24 @@ public class Main {
 		int count = 1;
 		
 		while (true) {
-		
-			System.out.printf("\n★ 第%d回戦 ==========\n", count);
-			
+		System.out.printf("\n★ 第%d回戦 ==========\n", count);
 			System.out.println("\n[人間のターン！]\n");
 		
 			Human human = choiceHuman(humans);
-			
 			Monster monster = choiceMonster(monsters);
 		
-			choiceHuman.attack(choiceMonster);
+			human.attack(monster);
 			
-			if(choiceMonster.getHp()==0) {
-				System.out.printf("%dは倒された。",choiceMonster.getName());
-				monsters.remove(choiceMonster);
+			if(monster.getHp()<=0) {
+				System.out.printf("%dは倒れた。",monster.getName());
+				monsters.remove(monster);
 				
-				choiceMonster.isEmpty();
+				if(monsters.isEmpty()) {
 				System.out.println("人間グループの勝利");
+				break;
 				
+				}
+			}
 				System.out.println("\n[モンスターのターン！]\n");
 				
 			
@@ -68,30 +68,31 @@ public class Main {
 				
 				Monster monster2 = choiceMonster(monsters);
 				
-				choiceMonster.attack(choiceHuman);
+				monster.attack(human);
 				
-				if(choiceHuman.getHp()==0) {
-					System.out.printf("%dは倒された。",choiceHuman.getName());
-					monsters.remove(choiceHuman);
-					humans.remove(choiceHuman);
-					choiceHuman.isEmpty();
+				if(human.getHp()<=0) {
+					System.out.printf("%dは倒れた。",human.getName());
+					humans.remove(human);
+					if(humans.isEmpty()) {
 					System.out.println("人間グループの敗北");
+					break;
 					
+					}
+				}
 					showGroupInfos(humans, monsters);
 					
 					
 					count++;
+					}
 					
 					showGroupInfos(humans, monsters);
-
 				}
 				
-				
-				
-			}
-		}
-}
+			
+		
 
+	
+				
 	public static Monster choiceMonster(List<Monster> monsters) {
 		Monster monster = monsters.get(Dice.get(0, monsters.size() - 1));
 		System.out.printf("モンスターグループから 「%s」 のお出ましだ！\n", monster.getName());
