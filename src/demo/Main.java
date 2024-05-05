@@ -51,41 +51,41 @@ public class Main {
 		
 			human.attack(monster);
 			
-			if(monster.getHp()<=0) {
-				System.out.printf("%dは倒れた。",monster.getName());
-				monsters.remove(monster);
+		if(monster.getHp()<=0) {
+			System.out.printf("%dは倒れた。",monster.getName());
+			monsters.remove(monster);
 				
-				monsters.isEmpty();
-				System.out.println("人間グループの勝利");
-	
+		monsters.isEmpty();
+		System.out.println("人間グループの勝利");
+
 				
-				
-			
-				System.out.println("\n[モンスターのターン！]\n");
 				
 			
-				Human human2 = choiceHuman(humans);
+		System.out.println("\n[モンスターのターン！]\n");
 				
-				Monster monster2 = choiceMonster(monsters);
+			
+		Human human2 = choiceHuman(humans);
 				
-				monster.attack(human);
+		Monster monster2 = choiceMonster(monsters);
 				
-				if(human.getHp()<=0) {
-					System.out.printf("%dは倒れた。",human.getName());
-					humans.remove(human);
+		monster.attack(human);
+				
+		if(human.getHp()<=0) {
+			System.out.printf("%dは倒れた。",human.getName());
+			humans.remove(human);
 					
-					humans.isEmpty();
-					System.out.println("人間グループの敗北");
+			humans.isEmpty();
+			System.out.println("人間グループの敗北");
 					
 					
 				
-					showGroupInfos(humans, monsters);
+		showGroupInfos(humans, monsters);
 					
 					
-					count++;
+		count++;
 					}
 					
-					showGroupInfos(humans, monsters);
+		showGroupInfos(humans, monsters);
 				
 				
 					}
