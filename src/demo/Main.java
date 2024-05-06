@@ -52,7 +52,7 @@ public class Main {
 			human.attack(monster);
 			
 		if(monster.getHp()<=0) {
-			System.out.printf("%dは倒れた。",monster.getName());
+			System.out.printf("%sは倒れた。",monster.getName());
 			monsters.remove(monster);
 				
 		if(monsters.isEmpty()) {
@@ -70,7 +70,7 @@ public class Main {
 		monster.attack(human);
 				
 		if(human.getHp()<=0) {
-			System.out.printf("%dは倒れた。",human.getName());
+			System.out.printf("%sは倒れた。",human.getName());
 			humans.remove(human);
 					
 		if(humans.isEmpty()) {
