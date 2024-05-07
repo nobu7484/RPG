@@ -42,7 +42,7 @@ public class Main {
 		
 		int count = 1;
 		
-	    while (true) {
+		while (true) {
 		    	System.out.printf("\n★ 第%d回戦 ==========\n", count);
 		    	System.out.println("\n[人間のターン！]\n");
 		    	
