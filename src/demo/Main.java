@@ -50,23 +50,23 @@ public class Main {
 		    	Monster monster = choiceMonster(monsters);
 		    
 		    	human.attack(monster);
-		    
-		        if(monster.getHp()<=0) {
+		    	
+		    	if(monster.getHp()<=0) {
 		        	System.out.printf("%sは倒れた。",monster.getName());
 		        	 
 		        	 monsters.remove(monster);
 				
-		        if(monsters.isEmpty()) {
-		        	System.out.println("人間グループの勝利");
-		        break;
+		        	 if(monsters.isEmpty()) {
+		        		 System.out.println("人間グループの勝利");
+		        		 break;
 		}
 	}
 		
 		
 		System.out.println("\n[モンスターのターン！]\n");
 				
-		choiceHuman(humans);
-		choiceMonster(monsters);
+		choiceHuman=choiceHuman(humans);
+		choiceMonster=choiceMonster(monsters);
 				
 		monster.attack(human);
 		
@@ -75,9 +75,9 @@ public class Main {
 		        	
 		        	humans.remove(human);
 		
-		        if(humans.isEmpty()) {
-		        	System.out.println("人間グループの敗北");
-		        break;
+		        	if(humans.isEmpty()) {
+		        		System.out.println("人間グループの敗北");
+		        		break;
 		}
 	}
 		
@@ -112,7 +112,6 @@ public class Main {
 	}
 
 	public static void showGroupInfos(List<Human> humans, List<Monster> monsters) {
-
 		System.out.println("\n## === グループ情報 === ##");
 		System.out.printf("# [人間グループ]: %d人\n", humans.size());
 		for (Human human : humans) {
