@@ -50,12 +50,12 @@ public class Main {
 		    	human.attack(monster);
 		    	
 		    	if(monster.getHp()<=0) {
-		        	System.out.printf("%sは倒れた。",monster.getName());
-		        	 
+		    		System.out.printf("\n★%sは倒れた.\n",monster.getName());
 		        	 monsters.remove(monster);
 				
 		        	 if(monsters.isEmpty()) {
-		        		 System.out.println("人間グループの勝利");
+		        		 System.out.println("\n★★ ==== 決着がついた！！ ==== ★★\n");
+		        		 System.out.println("\n人間グループの勝利\n");
 		        		 break;
 		}
 	}
@@ -69,12 +69,12 @@ public class Main {
 		monster.attack(human);
 		
 		        if(human.getHp()<=0) {
-		        	System.out.printf("%sは倒れた。",human.getName());
-		        	
+		        	System.out.printf("\n★%sは倒れた。\n",human.getName());
 		        	humans.remove(human);
-		
+		        	
 		        	if(humans.isEmpty()) {
-		        		System.out.println("人間グループの敗北");
+		        		System.out.println("\n★★ ==== 決着がついた！！ ==== ★★\n");
+		        		System.out.println("\n人間グループの敗北\n");
 		        		break;
 		}
 	}
