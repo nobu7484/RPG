@@ -12,7 +12,7 @@ public abstract class Human extends Living{
 		int damege = Dice.get(1,10)*this.offensive;
 		target.setHp(target.getHp()-damege);
 		this.offensive--;
-		System.out.println("「"+this.name+"」が「"+this.weapon+"」で攻撃！"+"「"+target.getName()+"」");
+		System.out.printf("%Sが%sで攻撃！%sに%dのダメージを与えた。",getName(),getWeapon(),target.getName(),damege);
 		System.out.println("しかし自分の攻撃力も1減少した。");
 		
 		
