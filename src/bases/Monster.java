@@ -10,8 +10,7 @@ public abstract class Monster extends Living {
 	public void attack(Living target) {
 		int damege = Dice.get(1,10)*this.offensive;
 		target.setHp(target.getHp()-damege);
-		this.offensive--;
-		System.out.printf("%Sが%sで攻撃！%sに%dのダメージを与えた。",getName(),getWeapon(),target.getName(),damege);
+		System.out.printf("「%s」が「%s」で攻撃！「%s」に「%d」のダメージを与えた。",getName(),getWeapon(),target.getName(),damege);
 		
 		
 }
