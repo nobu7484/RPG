@@ -2,7 +2,6 @@ package Monsters;
 import bases.Monster;
 import utils.Dice;
 
-
 public class Slime extends Monster{
 	public Slime(String name,String wepon) {
 		super(name,wepon);

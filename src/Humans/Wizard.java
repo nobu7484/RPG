@@ -1,5 +1,4 @@
 package Humans;
-
 import bases.Human;
 import utils.Dice;
 

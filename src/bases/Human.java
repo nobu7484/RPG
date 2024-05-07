@@ -3,7 +3,6 @@ package bases;
 import utils.Dice;
 
 public abstract class Human extends Living{
-	
 	public Human(String name, String weapon) {
 		super(name,weapon);
 	}	

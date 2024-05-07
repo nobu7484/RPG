@@ -42,40 +42,40 @@ public class Main {
 		
 		int count = 1;
 		
-		while (true) {
+	while (true) {
 		System.out.printf("\n★ 第%d回戦 ==========\n", count);
-			System.out.println("\n[人間のターン！]\n");
+		System.out.println("\n[人間のターン！]\n");
 		
-			Human human = choiceHuman(humans);
-			Monster monster = choiceMonster(monsters);
-		
-			human.attack(monster);
+		Human human = choiceHuman(humans);
+		Monster monster = choiceMonster(monsters);
+	
+		human.attack(monster);
 			
-		if(monster.getHp()<=0) {
-			System.out.printf("%sは倒れた。",monster.getName());
-			monsters.remove(monster);
+	if(monster.getHp()<=0) {
+		System.out.printf("%sは倒れた。",monster.getName());
+		monsters.remove(monster);
 				
-		if(monsters.isEmpty()) {
-			System.out.println("人間グループの勝利");
-			break;
+	if(monsters.isEmpty()) {
+		System.out.println("人間グループの勝利");
+		break;
 		}
 	}
 		
 		
 		System.out.println("\n[モンスターのターン！]\n");
 				
-			Human human2 = choiceHuman(humans);
-			Monster monster2 = choiceMonster(monsters);
+		Human human2 = choiceHuman(humans);
+		Monster monster2 = choiceMonster(monsters);
 				
 		monster.attack(human);
 				
-		if(human.getHp()<=0) {
-			System.out.printf("%sは倒れた。",human.getName());
-			humans.remove(human);
+	if(human.getHp()<=0) {
+		System.out.printf("%sは倒れた。",human.getName());
+		humans.remove(human);
 					
-		if(humans.isEmpty()) {
-			System.out.println("人間グループの敗北");
-			break;
+	if(humans.isEmpty()) {
+		System.out.println("人間グループの敗北");
+		break;
 		}
 	}
 		
