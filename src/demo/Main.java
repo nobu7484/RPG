@@ -9,14 +9,12 @@ import Monsters.Dragon;
 import Monsters.Oak;
 import Monsters.Slime;
 import bases.Human;
-import bases.Living;
 import bases.Monster;
 import utils.Dice;
 
 
 public class Main {
-	private static Human choiceHuman;
-	private static Living choiceMonster;
+	
 
 	public static void main(String[] args) {
 		System.out.println("★★ ==== 戦いの開始だ！！ ==== ★★");
@@ -65,8 +63,8 @@ public class Main {
 		
 		System.out.println("\n[モンスターのターン！]\n");
 				
-		choiceHuman=choiceHuman(humans);
-		choiceMonster=choiceMonster(monsters);
+		human=choiceHuman(humans);
+		monster=choiceMonster(monsters);
 				
 		monster.attack(human);
 		
