@@ -64,8 +64,8 @@ public class Main {
 		
 		System.out.println("\n[モンスターのターン！]\n");
 				
-		Human human2 = choiceHuman(humans);
-		Monster monster2 = choiceMonster(monsters);
+		choiceHuman(humans);
+		choiceMonster(monsters);
 				
 		monster.attack(human);
 		
