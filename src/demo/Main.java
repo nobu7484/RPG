@@ -55,7 +55,7 @@ public class Main {
 				
 		        	 if(monsters.isEmpty()) {
 		        		 System.out.println("\n★★ ==== 決着がついた！！ ==== ★★\n");
-		        		 System.out.println("\n人間グループの勝利\n");
+		        		 System.out.println("\n人間達の勝利\n");
 		        		 break;
 		}
 	}
@@ -74,7 +74,7 @@ public class Main {
 		        	
 		        	if(humans.isEmpty()) {
 		        		System.out.println("\n★★ ==== 決着がついた！！ ==== ★★\n");
-		        		System.out.println("\n人間グループの敗北\n");
+		        		System.out.println("\n人間達の敗北\n");
 		        		break;
 		}
 	}

@@ -12,7 +12,7 @@ public abstract class Human extends Living{
 		target.setHp(target.getHp()-damege);
 		this.offensive--;
 		System.out.printf("「%s」が「%s」で攻撃！「%s」に「%d」のダメージを与えた。",getName(),getWeapon(),target.getName(),damege);
-		System.out.println("しかし自分の攻撃力も1減少した。");
+		System.out.println("\nしかし自分の攻撃力も1減少した。\n");
 		
 		
 
